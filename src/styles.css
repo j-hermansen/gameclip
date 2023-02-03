@@ -32,29 +32,35 @@ body {
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 8s ease-in forwards infinite;
 }
+
 .cube:nth-child(2n) {
-  border-color: #FFF ;
+  border-color: #FFF;
 }
+
 .cube:nth-child(2) {
   animation-delay: 1s;
   left: 25%;
   top: 40%;
 }
+
 .cube:nth-child(3) {
   animation-delay: 3s;
   left: 80%;
   top: 50%;
 }
+
 .cube:nth-child(4) {
   animation-delay: 5s;
   left: 90%;
   top: 10%;
 }
+
 .cube:nth-child(5) {
   animation-delay: 7s;
   left: 10%;
   top: 50%;
 }
+
 .cube:nth-child(6) {
   animation-delay: 9s;
   left: 50%;
@@ -74,7 +80,7 @@ body {
 
 /* Video.js CSS START */
 .vjs-theme-forest {
-  --vjs-theme-forest--primary: rgb(129,140,248);
+  --vjs-theme-forest--primary: rgb(129, 140, 248);
 }
 
 .vjs-theme-forest.vjs-big-play-button:focus, .vjs-theme-forest:hover .vjs-big-play-button {
@@ -89,7 +95,7 @@ body {
   height: 6em;
 }
 
-.vjs-button>.vjs-icon-placeholder:before {
+.vjs-button > .vjs-icon-placeholder:before {
   font-size: 3.8em;
 }
 
@@ -101,7 +107,7 @@ body {
   width: 8em;
 }
 
-.video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal, .video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-horizontal, .video-js .vjs-volume-panel.vjs-hover .vjs-mute-control~.vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-horizontal {
+.video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal, .video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-horizontal, .video-js .vjs-volume-panel.vjs-hover .vjs-mute-control ~ .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-horizontal {
   width: 8em;
   height: 6em;
   margin-right: 0;
@@ -132,6 +138,7 @@ body {
 .video-js .vjs-time-control {
   font-size: 2em;
 }
+
 /* Video.js CSS END */
 
 .ghost {
@@ -141,7 +148,8 @@ body {
 }
 
 .corner {
-  width: 30px; height: 30px;
+  width: 30px;
+  height: 30px;
   border-radius: 5px;
   background-color: #161d31;
   position: absolute;
@@ -150,18 +158,22 @@ body {
   transform: rotate(45deg);
   z-index: -1;
 }
+
 .corner.two {
   margin-left: 35px;
 }
+
 .corner.three {
   margin-left: 70px;
 }
+
 .corner.four {
   margin-left: 105px;
 }
 
 .over {
-  width: 30px; height: 30px;
+  width: 30px;
+  height: 30px;
   border-radius: 4px;
   background-color: #161d31;
   position: absolute;
@@ -169,12 +181,15 @@ body {
   -webkit-transform: rotate(45deg) translateX(4px) translateY(4px);
   transform: rotate(45deg) translateX(4px) translateY(4px);
 }
+
 .over.two {
   margin-left: 35px;
 }
+
 .over.three {
   margin-left: 70px;
 }
+
 .over.four {
   margin-left: 105px;
 }
@@ -206,6 +221,7 @@ body {
     transform: scale(0.8) translateY(75px);
   }
 }
+
 @-webkit-keyframes ghost {
   0% {
     -webkit-transform: scale(1) translateY(0px);
@@ -216,6 +232,7 @@ body {
     transform: scale(1) translateY(-40px)
   }
 }
+
 @keyframes ghost {
   0% {
     -webkit-transform: scale(1) translateY(0px);
