@@ -16,6 +16,10 @@ export class ModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // This is adding modal to root (body) element so that
+    // CSS styles would not be inherited from parent components.
+    // Could do this on the modal because it's not part of the page layout
+    document.body.appendChild(this.el.nativeElement);
   }
 
   closeModal() {
