@@ -23,7 +23,8 @@ import { AlertComponent } from './alert/alert.component';
     ModalComponent,
     TabsContainerComponent,
     TabComponent,
-    InputComponent
+    InputComponent,
+    AlertComponent
   ],
   imports: [
     CommonModule,
