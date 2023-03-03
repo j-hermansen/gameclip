@@ -12,22 +12,26 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { VideoModule } from './video/video.module';
+import { ClipComponent } from './clip/clip.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ClipComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    VideoModule, // gets video router module also (needs to be imported before AppRoutingModule so navigation to /manage and /upload not gets overridden by wildcard 404 page)
     UserModule,
     AngularFireModule.initializeApp(environment.firebase), // connect the app to firebase
     AngularFireAuthModule,
     AngularFirestoreModule,
-    VideoModule // gets video router module also
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
