@@ -44,7 +44,9 @@ export class UploadComponent {
   storeFile($event: Event) {
     this.isDragover = false;
 
-    this.file = ($event as DragEvent).dataTransfer?.files.item(0) ?? null;
+    this.file =  ($event as DragEvent).dataTransfer ?
+      ($event as DragEvent).dataTransfer?.files.item(0) ?? null :
+      ($event.target as HTMLInputElement).files?.item(0) ?? null; // if file is uploaded with the fallback input element
 
     if (!this.file || this.file.type !== 'video/mp4') {
       return;
@@ -55,6 +57,8 @@ export class UploadComponent {
   }
 
   uploadVideo() {
+    this.uploadForm.disable();
+
     this.showAlert = true;
     this.alertColor = 'blue';
     this.alertMsg ='Please wait! Your clip is being uploaded.';
@@ -93,6 +97,8 @@ export class UploadComponent {
         this.showPercentage = false;
       },
       error: (error) => {
+        this.uploadForm.enabled;
+
         this.alertColor = 'red';
         this.alertMsg = 'Upload failed! Please try again later.';
         this.inSubmission = true;
